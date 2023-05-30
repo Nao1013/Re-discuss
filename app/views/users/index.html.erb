@@ -1,3 +1,11 @@
-<div class="container">
-  
-</div>
+<div class="container text-center col-6">
+    <div class="card mt-3 shadow">
+      <% @users.each do |user| %>
+      <div class="card-body">
+        <%= image_tag user.get_profile_image(50, 50), class: "rounded-circle" %>
+        <h5 class="card-title"><%= user.user_name %></h5><br>
+        <p class="card-text"><%= user.introduct %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
