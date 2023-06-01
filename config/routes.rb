@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'genders/index'
+  get 'genders/show'
   root :to => "homes#top"
   devise_for :users
   
