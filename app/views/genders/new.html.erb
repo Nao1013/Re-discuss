@@ -1,0 +1,19 @@
+<div class="container text-center mt-3">
+  <%= form_with model: @gende, local:true do |form| %>
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_area :body %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit "投稿する" %>
+    </div>
+  <% end %>
+  
+  <%= link_to "一覧", genders_path %>
+</div>

@@ -1,2 +1,11 @@
-<h1>Genders#index</h1>
-<p>Find me in app/views/genders/index.html.erb</p>
+<div class="container text-center">
+  
+  <% @genders.each do |gender| %>
+    <%= link_to user_path(gender.user.id) do %>
+      <%= gender.user.user_name %>
+    <% end %>
+    <%= link_to gender_path(gender) do %>
+      <%= gender.title %>
+    <% end %>
+  <% end %>
+</div>

@@ -6,6 +6,8 @@ class GendersController < ApplicationController
   
   def create
     @gender = Gender.new(gender_params)
+    # @gender.user_id = current_user.id
+    # @user = current_user
     if @gender.save
       redirect_to gender_path(@gender)
     else
