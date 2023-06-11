@@ -1,5 +1,5 @@
 <div class="container text-center mt-3">
-  <%= form_with model: @gende, local:true do |form| %>
+  <%= form_with model: @gender, url: genders_path do |form| %>
     <div class="field">
       <%= form.label :title %>
       <%= form.text_field :title %>
