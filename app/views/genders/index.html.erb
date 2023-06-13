@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container col-sm-6">
   <table class="table mt-3 text-center">
     <% @genders.each do |gender| %>
     <tbody>
@@ -13,6 +13,10 @@
           <%= link_to gender_path(gender) do %>
             <%= gender.title %>
           <% end %>
+        </td>
+        <td>
+          <%= link_to "編集", gender_path(gender), class: "btn-sm btn-success" %>
+          <%= link_to "削除", gender_path(gender), method: :delete, class: "btn-sm btn-danger", "data-confirm" => "本当に削除しますか？" %>
         </td>
       </tr>
     </tbody>
