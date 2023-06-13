@@ -1,11 +1,21 @@
-<div class="container text-center">
-  
-  <% @genders.each do |gender| %>
-    <%= link_to user_path(gender.user.id) do %>
-      <%= gender.user.user_name %>
+<div class="container">
+  <table class="table mt-3 text-center">
+    <% @genders.each do |gender| %>
+    <tbody>
+      <tr>
+        <td>
+          <%= link_to user_path(gender.user.id) do %>
+            <%= image_tag gender.user.get_profile_image(50, 50), class: "rounded-circle" %><br>
+            <%= gender.user.user_name %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to gender_path(gender) do %>
+            <%= gender.title %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
     <% end %>
-    <%= link_to gender_path(gender) do %>
-      <%= gender.title %>
-    <% end %>
-  <% end %>
+  </table>
 </div>
