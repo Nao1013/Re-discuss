@@ -15,8 +15,10 @@
           <% end %>
         </td>
         <td>
-          <%= link_to "編集", gender_path(gender), class: "btn-sm btn-success" %>
-          <%= link_to "削除", gender_path(gender), method: :delete, class: "btn-sm btn-danger", "data-confirm" => "本当に削除しますか？" %>
+          <% if gender.user.id == current_user.id %>
+            <%= link_to "編集", gender_path(gender), class: "btn-sm btn-success" %>
+            <%= link_to "削除", gender_path(gender), method: :delete, class: "btn-sm btn-danger", "data-confirm" => "本当に削除しますか？" %>
+          <% end %>
         </td>
       </tr>
     </tbody>
