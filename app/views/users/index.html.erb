@@ -1,11 +1,23 @@
-<div class="container text-center col-6">
-    <div class="card mt-3 shadow">
-      <% @users.each do |user| %>
-      <div class="card-body">
-        <%= image_tag user.get_profile_image(50, 50), class: "rounded-circle" %>
-        <h5 class="card-title"><%= user.user_name %></h5><br>
-        <p class="card-text"><%= user.introduct %></p>
-      </div>
-      <% end %>
+<div class="container mt-3">
+    <div class="card p-3 shadow mx-auto col-sm-6">
+      <table>
+        <tbody>
+          <% @users.each do |user| %>
+           <div class="card-body">
+            <tr>
+              <td class="text-left">
+                <%= link_to user_path(user) do %>
+                <%= image_tag user.get_profile_image(100, 100), class: "rounded-circle" %>
+                <h6><%= user.user_name %></h6>
+                <% end %>
+              </td>
+              <td>
+                <p class="text-left"><%=safe_join(user.introduct.split("\n"),tag(:br))%></p>
+              </td>
+            </tr>
+          </div>
+        </tbody>
+        <% end %>
+      </table>
     </div>
   </div>
