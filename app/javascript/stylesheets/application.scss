@@ -1,2 +1,6 @@
 @use '~bootstrap/scss/bootstrap';
 @use '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+.gay span {
+  background: linear-gradient(transparent 30%, yellow 0%);
+}
