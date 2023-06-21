@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root :to => "homes#top"
   get "/about" => "homes#about"
   get "/gay" => "homes#gay"
+  get "/les" => "homes#les"
   devise_for :users
   
   resources :users

@@ -6,4 +6,8 @@ class HomesController < ApplicationController
   def gay
     
   end
+  
+  def les
+    
+  end
 end
