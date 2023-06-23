@@ -10,4 +10,8 @@ class HomesController < ApplicationController
   def les
     
   end
+  
+  def trans
+    
+  end
 end
