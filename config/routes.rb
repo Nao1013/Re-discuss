@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/gay" => "homes#gay"
   get "/les" => "homes#les"
   get "/trans" => "homes#trans"
+  get "/ques" => "homes#ques"
   devise_for :users
 
   resources :users

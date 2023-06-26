@@ -14,4 +14,8 @@ class HomesController < ApplicationController
   def trans
     
   end
+  
+  def ques
+    
+  end
 end
