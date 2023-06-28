@@ -18,4 +18,8 @@ class HomesController < ApplicationController
   def ques
     
   end
+  
+  def sogi
+    
+  end
 end
