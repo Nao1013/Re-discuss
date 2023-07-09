@@ -9,6 +9,16 @@
       <%= form.label :body %>
       <%= form.text_area :body %>
     </div>
+    
+    <p>
+    <%= form.label :genre, 'ジャンル' %>
+    <%= form.collection_radio_buttons(:genre_ids, Genre.all, :id, :name) do |genre| %> 
+      <%= genre.label do %>
+        <%= genre.radio_button %>
+        <%= genre.text %>
+      <% end %>
+    <% end %>
+  </p>
   
     <div class="actions">
       <%= form.submit "投稿する" %>

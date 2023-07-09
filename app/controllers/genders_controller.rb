@@ -46,6 +46,6 @@ class GendersController < ApplicationController
   private
   
   def gender_params
-    params.require(:gender).permit(:title, :body)
+    params.require(:gender).permit(:title, :body, :genre_ids)
   end
 end
