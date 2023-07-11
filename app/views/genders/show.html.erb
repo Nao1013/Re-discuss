@@ -3,11 +3,11 @@
   <div class="card mx-auto col-sm-8 shadow">
     <div class="card-body text-left">
       <%= @gender.body %>
-      <span>【ジャンル】</span>
+      <div class="text-right">【ジャンル】
       <% @gender.genres.each do |genre| %>
         <%= genre.name %>
       <% end %>
-      <div class="text-right">
+      
         <%= link_to "編集", edit_gender_path, class: "btn btn-sm btn-success" %>
         <%= link_to "削除", gender_path, class: "btn btn-sm btn-danger" %>
       </div>

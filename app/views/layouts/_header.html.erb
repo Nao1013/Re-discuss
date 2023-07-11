@@ -10,11 +10,11 @@
         <!--Current_userパス-->
         <li class="nav-item">
           <%= link_to user_path(current_user), class: 'text-white mr-3' do %>
-          <i class="fas fa-home"></i>Home
+          <i class="fas fa-home"></i>マイアカウント
           <% end %>
         </li>
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle text-white mr-3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+          <a href="#" class="text-white mr-3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ジェンダーとは ▾</a>
           <ul class="dropdown-menu" style="width: 220px;">
             <li>
               <%= link_to "ゲイとは", gay_path, class: "text-black ml-3" %>
@@ -35,15 +35,22 @@
         </li>
         <li class="nav-item">
           <%= link_to genders_path, class: 'text-white mr-3' do %>
-          <i class="far fa-paper-plane"></i>Gender
+          <i class="far fa-paper-plane"></i>悩み一覧
           <% end %>
         </li>
         <!--Userパス-->
         <li class="nav-item">
           <%= link_to users_path, class: 'text-white mr-3' do %>
-          <i class="fas fa-users"></i>Users
+          <i class="fas fa-users"></i>他のユーザー
           <% end %>
         </li>
+        
+        <li class="nav-item">
+          <%= link_to destroy_user_session_path, method: :delete, class: 'text-white mr-3' do %>
+          <i class="fas fa-sign-out-alt"></i>ログアウト
+          <% end %>
+        </li>
+        
         <%= link_to "投稿", new_gender_path, class: "btn-sm btn-success" %>
         
         <!--Genderパス-->
@@ -58,13 +65,8 @@
         <!--  <%# end %>-->
         <!--</li>-->
         <% else %>
-        <li class="nav-item">
-          <%= link_to root_path, class: "text-white mr-3" do %>
-            <i class="fas fa-home"></i>Home
-          <% end %>
-        </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle text-white mr-3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+          <a href="#" class="text-white mr-3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ジェンダーについて ▾</a>
           <ul class="dropdown-menu" style="width: 220px;">
             <li>
               <%= link_to "ゲイとは", gay_path, class: "text-black ml-3" %>
@@ -85,12 +87,12 @@
         </li>
         <li class="nav-item">
           <%= link_to new_user_registration_path, class: 'text-white mr-3' do %>
-            <i class="fas fa-user-plus"></i>Sign up
+            <i class="fas fa-user-plus"></i>新規登録
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to new_user_session_path, class: 'text-white' do %>
-            <i class="fas fa-sign-in-alt"></i>Log in
+            <i class="fas fa-sign-in-alt"></i>ログイン
           <% end %>
         </li>
 
