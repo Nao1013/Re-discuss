@@ -1,9 +1,12 @@
 <div class="container mt-3">
-    <div class="card p-3 shadow mx-auto col-sm-6">
-      <table>
-        <tbody>
+  <div class="row">
+
+    <%= render "genders/genre" %>
+
+    <div class="mt-3 col-sm-8">
+     <table class="card border-secondary">
+        <tbody class="card-body p-3">
           <% @users.each do |user| %>
-           <div class="card-body">
             <tr>
               <td class="text-left">
                 <%= link_to user_path(user) do %>
@@ -12,12 +15,13 @@
                 <% end %>
               </td>
               <td>
-                <p class="text-left"><%=safe_join(user.introduct.split("\n"),tag(:br))%></p>
+                <p class="text-left ml-3"><%=safe_join(user.introduct.split("\n"),tag(:br))%></p>
               </td>
             </tr>
-          </div>
+            <% end %>
         </tbody>
-        <% end %>
       </table>
     </div>
-  </div>
+
+    </div>
+</div>
