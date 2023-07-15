@@ -3,8 +3,8 @@
     
       <%= render "genre"%>
 
-    
-      <table class="table mt-3 text-center col-sm-8">
+    <div class="mt-3 col-sm-8">
+      <table class="table text-center">
         <% @genders.each do |gender| %>
         <tbody>
           <tr>
@@ -29,6 +29,7 @@
         </tbody>
         <% end %>
       </table>
+    </div>
     </div>
   
 </div>
